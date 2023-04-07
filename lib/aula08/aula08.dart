@@ -13,6 +13,7 @@ class _Aula08State extends State<Aula08> {
   bool _showPassword = false;
   late final TextEditingController _userController;
   late final TextEditingController _senhaController;
+  List<bool> _selectedList = [true, false, false];
 
   @override
   void initState() {
@@ -39,6 +40,21 @@ class _Aula08State extends State<Aula08> {
     debugPrint('Senha: ${_senhaController.text}');
   }
 
+  void _toggleSelectedList(int index) {
+    setState(() {
+      for (int i = 0; i < _selectedList.length; i++) {
+        _selectedList[i] = i == index ? true : false;
+      }
+      // _selectedList = index == 0
+      //     ? [true, false, false]
+      //     : index == 1
+      //         ? [false, true, false]
+      //         : index == 2
+      //             ? [false, false, true]
+      //             : [false, false, false];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +64,33 @@ class _Aula08State extends State<Aula08> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const Text('Logar com: '),
+                  SizedBox(width: 8),
+                  ToggleButtons(
+                    borderRadius: BorderRadius.circular(10),
+                    isSelected: _selectedList,
+                    onPressed: _toggleSelectedList,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('E-mail'),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('CPF'),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('E-Telefone'),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 16),
               TextField(
                 // userName
                 controller: _userController,
@@ -65,7 +108,7 @@ class _Aula08State extends State<Aula08> {
                 obscureText: !_showPassword,
                 decoration: InputDecoration(
                   label: const Text('Senha'),
-                  hintText: 'senha do usuário',
+                  hintText: 'Senha',
                   border: const OutlineInputBorder(),
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
@@ -84,9 +127,7 @@ class _Aula08State extends State<Aula08> {
                     30,
                   ),
                 ),
-                onPressed: () {
-                  _testFields();
-                },
+                onPressed: _testFields,
                 child: const Text('Login'),
               )
             ],

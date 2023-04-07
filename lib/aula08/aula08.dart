@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 
 // stf para gerar o statefulWidget
 
@@ -42,9 +43,10 @@ class _Aula08State extends State<Aula08> {
 
   void _toggleSelectedList(int index) {
     setState(() {
-      for (int i = 0; i < _selectedList.length; i++) {
-        _selectedList[i] = i == index ? true : false;
-      }
+      // for (int i = 0; i < _selectedList.length; i++) {
+      //   _selectedList[i] = i == index ? true : false;
+      // }
+
       // _selectedList = index == 0
       //     ? [true, false, false]
       //     : index == 1
@@ -52,6 +54,9 @@ class _Aula08State extends State<Aula08> {
       //         : index == 2
       //             ? [false, false, true]
       //             : [false, false, false];
+
+      _selectedList =
+          _selectedList.mapIndexed((idx, val) => idx == index).toList();
     });
   }
 

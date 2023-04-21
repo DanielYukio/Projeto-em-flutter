@@ -18,7 +18,7 @@ class _Aula08State extends State<Aula08> {
   late final TextEditingController _userController;
   late final TextEditingController _senhaController;
   List<bool> _selectedList = [true, false, false];
-  TiposDeLogin tipoLogin = TiposDeLogin.email;
+  TiposDeLoginEnhanced tipoLogin = TiposDeLoginEnhanced.email;
   bool _memorizar = false;
 
   @override
@@ -48,7 +48,7 @@ class _Aula08State extends State<Aula08> {
 
   void _alterarTipoLogin(int index) {
     setState(() {
-      tipoLogin = TiposDeLogin.values[index];
+      tipoLogin = TiposDeLoginEnhanced.values[index];
       _selectedList =
           _selectedList.mapIndexed((idx, val) => idx == index).toList();
     });

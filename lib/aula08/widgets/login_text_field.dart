@@ -12,7 +12,7 @@ class LoginTextField extends StatefulWidget {
   }) : _controller = controller;
 
   final TextEditingController _controller;
-  final TiposDeLogin tipoLogin;
+  final TiposDeLoginEnhanced tipoLogin;
 
   @override
   State<LoginTextField> createState() => _LoginTextFieldState();
@@ -28,10 +28,10 @@ class _LoginTextFieldState extends State<LoginTextField> {
       controller: widget._controller,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-        label: Text(loginDetails[widget.tipoLogin]!.label),
-        hintText: loginDetails[widget.tipoLogin]!.hintText,
+        label: Text(widget.tipoLogin.label),
+        hintText: widget.tipoLogin.hintText,
         border: const OutlineInputBorder(),
-        prefixIcon: loginDetails[widget.tipoLogin]!.prefixIcon,
+        prefixIcon: widget.tipoLogin.prefixIcon,
       ),
     );
   }

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class TiposLogin extends StatefulWidget {
-  const TiposLogin({
+class TipoLogin extends StatefulWidget {
+  const TipoLogin({
     super.key,
     required this.selectedList,
     required this.alterarTipoLogin,
@@ -14,17 +14,17 @@ class TiposLogin extends StatefulWidget {
   final Function(int) alterarTipoLogin;
 
   @override
-  State<TiposLogin> createState() => _TiposLoginState();
+  State<TipoLogin> createState() => _TipoLoginState();
 }
 
-class _TiposLoginState extends State<TiposLogin> {
+class _TipoLoginState extends State<TipoLogin> {
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         const Text('Logar com: '),
-        const SizedBox(width: 8),
+        const SizedBox(height: 8),
         ToggleButtons(
           borderRadius: BorderRadius.circular(10),
           isSelected: widget.selectedList,

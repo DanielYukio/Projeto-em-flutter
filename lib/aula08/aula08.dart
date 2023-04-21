@@ -19,6 +19,7 @@ class _Aula08State extends State<Aula08> {
   late final TextEditingController _senhaController;
   List<bool> _selectedList = [true, false, false];
   TiposDeLogin tipoLogin = TiposDeLogin.email;
+  bool _memorizar = false;
 
   @override
   void initState() {
@@ -94,6 +95,24 @@ class _Aula08State extends State<Aula08> {
                       ),
                     ),
                   ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Text('Memorizar dados'),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Switch(
+                      value: _memorizar,
+                      onChanged: (value) => {
+                        setState(() {
+                          _memorizar = value;
+                        })
+                      },
+                    )
+                  ],
                 ),
                 const SizedBox(height: 16),
                 ElevatedButton(

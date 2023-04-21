@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
+import 'package:projetobase/aula08/widgets/tipo_login.dart';
 
 // stf para gerar o statefulWidget
 
@@ -41,7 +42,7 @@ class _Aula08State extends State<Aula08> {
     debugPrint('Senha: ${_senhaController.text}');
   }
 
-  void _toggleSelectedList(int index) {
+  void _alterarTipoLogin(int index) {
     setState(() {
       // for (int i = 0; i < _selectedList.length; i++) {
       //   _selectedList[i] = i == index ? true : false;
@@ -69,38 +70,16 @@ class _Aula08State extends State<Aula08> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const Text('Logar com: '),
-                  SizedBox(width: 8),
-                  ToggleButtons(
-                    borderRadius: BorderRadius.circular(10),
-                    isSelected: _selectedList,
-                    onPressed: _toggleSelectedList,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('E-mail'),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('CPF'),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('E-Telefone'),
-                      ),
-                    ],
-                  )
-                ],
+              TiposLogin(
+                selectedList: _selectedList,
+                alterarTipoLogin: _alterarTipoLogin,
               ),
               const SizedBox(height: 16),
               TextField(
                 // userName
                 controller: _userController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   label: Text('E-mail'),
                   hintText: 'user@email.com',
                   border: OutlineInputBorder(),

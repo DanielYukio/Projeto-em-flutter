@@ -19,8 +19,6 @@ class LoginTextField extends StatefulWidget {
 }
 
 class _LoginTextFieldState extends State<LoginTextField> {
-  var loginDetails = LoginDetails.loginDetails();
-
   @override
   Widget build(BuildContext context) {
     return TextField(

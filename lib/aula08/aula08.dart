@@ -3,6 +3,7 @@ import 'package:collection/collection.dart';
 import 'package:projetobase/aula08/classes/login_details.dart';
 import 'package:projetobase/aula08/widgets/login_text_field.dart';
 import 'package:projetobase/aula08/widgets/tipo_login.dart';
+import 'package:projetobase/aula09/aula09.dart';
 
 // stf para gerar o statefulWidget
 
@@ -122,7 +123,15 @@ class _Aula08State extends State<Aula08> {
                       35,
                     ),
                   ),
-                  onPressed: _testFields,
+                  onPressed: () {
+                    _testFields();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Aula09(),
+                      ),
+                    );
+                  },
                   child: const Text('Login'),
                 )
               ],

@@ -36,6 +36,31 @@ class Disciplina {
         nome: 'Programação para Disp. Móveis',
         professor: 'Dourado',
       ),
+      Disciplina(
+        codigo: 'PDMDE',
+        nome: 'Programação para Disp. Móveis',
+        professor: 'Dourado',
+      ),
+      Disciplina(
+        codigo: 'PDMDE',
+        nome: 'Programação para Disp. Móveis',
+        professor: 'Dourado',
+      ),
+      Disciplina(
+        codigo: 'PDMDE',
+        nome: 'Programação para Disp. Móveis',
+        professor: 'Dourado',
+      ),
+      Disciplina(
+        codigo: 'PDMDE',
+        nome: 'Programação para Disp. Móveis',
+        professor: 'Dourado',
+      ),
+      Disciplina(
+        codigo: 'PDMDE',
+        nome: 'Programação para Disp. Móveis',
+        professor: 'Dourado',
+      ),
     ];
   }
 }

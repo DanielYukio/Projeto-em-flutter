@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:projetobase/aula08/classes/login_details.dart';
 
 class LoginTextField extends StatefulWidget {
@@ -31,6 +28,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
         border: const OutlineInputBorder(),
         prefixIcon: widget.tipoLogin.prefixIcon,
       ),
+      inputFormatters: widget.tipoLogin.textInputFormatters(),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:projetobase/aula09/view/aula09_dashboard.dart';
+import 'package:projetobase/aula09/view/aula09_disciplinas.dart';
 
 class Aula09 extends StatefulWidget {
   const Aula09({super.key});
@@ -11,6 +13,7 @@ class Aula09 extends StatefulWidget {
 
 class _Aula09State extends State<Aula09> {
   int _itemSelecionado = 0;
+  final List<Widget> _subTelas = const [Aula09Dashboard(), Aula09Disciplinas()];
 
   void _alterarBottomNav(int index) {
     if (index == 2) {
@@ -23,18 +26,15 @@ class _Aula09State extends State<Aula09> {
 
   @override
   Widget build(BuildContext context) {
+    var args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+
     return WillPopScope(
       onWillPop: () async {
         return false;
       },
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Principal'),
-          automaticallyImplyLeading: false,
-        ),
-        body: const Center(
-          child: Text('Aula 09'),
-        ),
+        body: _subTelas[_itemSelecionado],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _itemSelecionado,
           backgroundColor: Colors.green,

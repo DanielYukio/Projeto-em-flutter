@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 enum TiposDeLogin { email, cpf, telefone }
 
 enum TiposDeLoginEnhanced {
   email(
-      label: 'E-Mail',
-      hintText: 'usuario@email.com',
-      prefixIcon: Icon(Icons.mail)),
+    label: 'E-Mail',
+    hintText: 'usuario@email.com',
+    prefixIcon: Icon(Icons.mail),
+  ),
   cpf(
-      label: 'CPF',
-      hintText: '111.111.111-11',
-      prefixIcon: Icon(Icons.credit_card)),
+    label: 'CPF',
+    hintText: '111.111.111-11',
+    prefixIcon: Icon(Icons.credit_card),
+  ),
   telefone(
-      label: 'Telefone',
-      hintText: '(11) 11111-1111',
-      prefixIcon: Icon(Icons.phone));
+    label: 'Telefone',
+    hintText: '(11) 11111-1111',
+    prefixIcon: Icon(Icons.phone),
+  );
 
   const TiposDeLoginEnhanced({
     required this.label,
@@ -25,6 +29,19 @@ enum TiposDeLoginEnhanced {
   final String label;
   final String hintText;
   final Icon prefixIcon;
+
+  List<TextInputFormatter> textInputFormatters() {
+    switch (this) {
+      case TiposDeLoginEnhanced.cpf:
+        return [];
+
+      case TiposDeLoginEnhanced.telefone:
+        return [];
+
+      default:
+        return [];
+    }
+  }
 }
 
 // class LoginDetails {

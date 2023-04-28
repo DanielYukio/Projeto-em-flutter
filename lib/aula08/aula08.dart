@@ -68,7 +68,7 @@ class _Aula08State extends State<Aula08> {
               children: [
                 const Image(
                   width: 240,
-                  image: AssetImage('assets/images/ifsplogo.jpg'),
+                  image: AssetImage('assets/images/ifsplogo.png'),
                 ),
                 const SizedBox(height: 8),
                 TipoLogin(
@@ -125,11 +125,10 @@ class _Aula08State extends State<Aula08> {
                   ),
                   onPressed: () {
                     _testFields();
-                    Navigator.push(
+                    Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const Aula09(),
-                      ),
+                      '/aula09',
+                      arguments: {'nome': 'Dourado'},
                     );
                   },
                   child: const Text('Login'),

@@ -40,7 +40,7 @@ class _TipoLoginState extends State<TipoLogin> {
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text('E-Telefone'),
+              child: Text('Telefone'),
             ),
           ],
         )

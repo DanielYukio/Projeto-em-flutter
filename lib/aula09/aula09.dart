@@ -18,6 +18,7 @@ class _Aula09State extends State<Aula09> {
   void _alterarBottomNav(int index) {
     if (index == 2) {
       Navigator.pop(context);
+      return;
     }
     setState(() {
       _itemSelecionado = index;

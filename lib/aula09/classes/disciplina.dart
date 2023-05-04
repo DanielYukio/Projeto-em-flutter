@@ -12,54 +12,34 @@ class Disciplina {
   static List<Disciplina> gerarDisciplinas() {
     return [
       Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
+        codigo: 'AGRD5',
+        nome: 'Administração e Gerenciamento de Redes',
+        professor: 'Newton Mitsushigue Kamimura',
+      ),
+      Disciplina(
+        codigo: 'CBGD5',
+        nome: 'Contabilidade Básica e Gestão Financeira',
+        professor: 'Eline Gomes de Oliveira Zioli',
+      ),
+      Disciplina(
+        codigo: 'GPRD5',
+        nome: 'Gestão de Projetos',
+        professor: 'Luiz Egídio Costa Cunha',
       ),
       Disciplina(
         codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
+        nome: 'Programação p/ Dispositivos. Móveis',
+        professor: 'Antônio Miguel Batista Dourado',
       ),
       Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
+        codigo: 'PL1D5',
+        nome: 'Projeto Integrado I',
+        professor: 'Giorjety Licorini Dias',
       ),
       Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
-      ),
-      Disciplina(
-        codigo: 'PDMDE',
-        nome: 'Programação para Disp. Móveis',
-        professor: 'Dourado',
+        codigo: 'TP2D5',
+        nome: 'Técnicas de Programação II',
+        professor: 'Felipe Alexandre Cardoso Pazinato',
       ),
     ];
   }

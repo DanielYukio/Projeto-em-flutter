@@ -17,7 +17,8 @@ class DisciplinaCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              decoration: const BoxDecoration(color: Colors.blue),
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(255, 0, 196, 98)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.height,
                 height: 20,
@@ -35,7 +36,7 @@ class DisciplinaCard extends StatelessWidget {
             ),
             Text(disciplina.professor),
             const SizedBox(
-              height: 5,
+              height: 10,
             )
           ],
         ),

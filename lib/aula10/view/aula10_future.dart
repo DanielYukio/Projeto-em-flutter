@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:projetobase/aula09/classes/disciplina.dart';
 import 'package:projetobase/aula09/widgets/disciplina_card_dart.dart';
 import 'package:projetobase/aula10/widgets/carregando_widget.dart';

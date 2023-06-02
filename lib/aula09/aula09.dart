@@ -14,10 +14,51 @@ class Aula09 extends StatefulWidget {
 class _Aula09State extends State<Aula09> {
   int _itemSelecionado = 0;
   final List<Widget> _subTelas = const [Aula09Dashboard(), Aula09Disciplinas()];
+  bool _deslogar = false;
+
+  // _logoff() {
+  //   if (_deslogar) {
+  //     Navigator.of(context).pop;
+  //   }
+  // }
+
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: ((context) {
+        return AlertDialog(
+          title: const Text('Você deseja deslogar?'),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                Icons.check_circle_outline,
+                size: 40,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                Icons.cancel_outlined,
+                size: 40,
+                color: Theme.of(context).colorScheme.error,
+              ),
+            ),
+          ],
+        );
+      }),
+    );
+  }
 
   void _alterarBottomNav(int index) {
     if (index == 2) {
-      Navigator.pop(context);
+      _showDialog(context);
       return;
     }
     setState(() {
@@ -38,7 +79,7 @@ class _Aula09State extends State<Aula09> {
         body: _subTelas[_itemSelecionado],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _itemSelecionado,
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromARGB(255, 76, 175, 80),
           selectedItemColor: Colors.white,
           onTap: _alterarBottomNav,
           items: const [

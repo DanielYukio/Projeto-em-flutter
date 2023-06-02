@@ -120,7 +120,7 @@ class _Aula08State extends State<Aula08> {
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(
                       MediaQuery.of(context).size.width * 0.75,
-                      35,
+                      50,
                     ),
                   ),
                   onPressed: () {

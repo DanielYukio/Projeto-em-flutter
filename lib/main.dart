@@ -5,9 +5,19 @@ import 'package:projetobase/aula09/view/aula09_dashboard.dart';
 import 'package:projetobase/aula09/view/aula09_disciplinas.dart';
 import 'package:projetobase/aula10/aula10.dart';
 import 'package:projetobase/aula10/view/aula10_future.dart';
+import 'package:projetobase/aula12/model/carrinho_model.dart';
+import 'package:projetobase/aula12/view/cardapio_view.dart';
+import 'package:projetobase/aula12/view/pedido_view.dart';
+import 'package:projetobase/aula13/theme/color_schemes2.g.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CarrinhoModel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,10 +27,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
+        colorScheme: darkColorScheme,
+        useMaterial3: true,
       ),
-      initialRoute: '/aula10_future',
+      theme: ThemeData(
+        colorScheme: lightColorScheme,
+        useMaterial3: true,
+      ),
+      initialRoute: '/cardapio',
+      // home: const CardapioView(),
       routes: {
         '/': (context) => const Aula08(),
         '/aula09': (context) => const Aula09(),
@@ -28,6 +45,8 @@ class MyApp extends StatelessWidget {
         '/aula09_disciplinas': (context) => const Aula09Disciplinas(),
         '/aula10': (context) => const Aula10(),
         '/aula10_future': (context) => const Aula10Future(),
+        '/cardapio': (context) => const CardapioView(),
+        '/pedidos': (context) => const PedidoView(),
       },
     );
   }

@@ -150,10 +150,10 @@ class _Aula08State extends State<Aula08> {
                       onPressed: () {
                         Navigator.pushNamed(
                           context,
-                          '/aula14',
+                          '/listaAlunos',
                         );
                       },
-                      child: const Text('Banco de Dados'),
+                      child: const Text('Alunos'),
                     )
                   ],
                 ),

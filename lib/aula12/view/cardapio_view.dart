@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badge;
 import 'package:flutter/material.dart';
 import 'package:projetobase/aula12/model/carrinho_model.dart';
 import 'package:projetobase/aula12/model/produto.dart';
@@ -24,8 +24,8 @@ class CardapioView extends StatelessWidget {
                   Navigator.pushNamed(context, '/pedidos');
                 }
               },
-              child: Badge(
-                badgeStyle: const BadgeStyle(badgeColor: Colors.green),
+              child: badge.Badge(
+                badgeStyle: const badge.BadgeStyle(badgeColor: Colors.green),
                 showBadge: carrinho.numProdutos > 0,
                 badgeContent: Text('${carrinho.numProdutos}'),
                 child: const Icon(Icons.shopping_cart),

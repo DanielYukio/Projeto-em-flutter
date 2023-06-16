@@ -3,7 +3,6 @@ import 'package:collection/collection.dart';
 import 'package:projetobase/aula08/classes/login_details.dart';
 import 'package:projetobase/aula08/widgets/login_text_field.dart';
 import 'package:projetobase/aula08/widgets/tipo_login.dart';
-import 'package:projetobase/aula09/aula09.dart';
 
 // stf para gerar o statefulWidget
 
@@ -122,6 +121,7 @@ class _Aula08State extends State<Aula08> {
                       MediaQuery.of(context).size.width * 0.75,
                       50,
                     ),
+                    backgroundColor: Colors.greenAccent,
                   ),
                   onPressed: () {
                     _testFields();
@@ -132,7 +132,31 @@ class _Aula08State extends State<Aula08> {
                     );
                   },
                   child: const Text('Login'),
-                )
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/cardapio',
+                        );
+                      },
+                      child: const Text('Cardapio'),
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/aula14',
+                        );
+                      },
+                      child: const Text('Banco de Dados'),
+                    )
+                  ],
+                ),
               ],
             ),
           ),

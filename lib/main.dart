@@ -11,6 +11,8 @@ import 'package:projetobase/aula12/view/pedido_view.dart';
 import 'package:projetobase/aula13/theme/color_schemes2.g.dart';
 import 'package:provider/provider.dart';
 
+import 'aula14/aula14.dart';
+
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: lightColorScheme,
         useMaterial3: true,
       ),
-      initialRoute: '/cardapio',
+      initialRoute: '/',
       // home: const CardapioView(),
       routes: {
         '/': (context) => const Aula08(),
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/aula10_future': (context) => const Aula10Future(),
         '/cardapio': (context) => const CardapioView(),
         '/pedidos': (context) => const PedidoView(),
+        '/aula14': (context) => const Aula14(),
       },
     );
   }

@@ -15,6 +15,8 @@ class CardapioView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Lista de Produtos'),
+        backgroundColor: Colors.greenAccent,
         actions: [
           Padding(
             padding: const EdgeInsets.all(16.0),

@@ -31,6 +31,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio: ^5.2.1+1
+  dio_cache_interceptor: ^3.4.2
+  dio_cache_interceptor_hive_store: ^3.2.1
+  path_provider: ^2.0.15
   sqflite: ^2.2.8+4
   sqflite_common: ^2.4.5+1
   collection: ^1.16.0

@@ -11,6 +11,10 @@ class PedidoView extends StatelessWidget {
     var carrinho = context.watch<CarrinhoModel>();
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Carrinho de Compras'),
+        backgroundColor: Colors.limeAccent,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

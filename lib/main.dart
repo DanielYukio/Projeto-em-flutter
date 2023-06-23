@@ -10,6 +10,7 @@ import 'package:projetobase/aula12/view/cardapio_view.dart';
 import 'package:projetobase/aula12/view/pedido_view.dart';
 import 'package:projetobase/aula13/theme/color_schemes2.g.dart';
 import 'package:projetobase/aula14/view/lista_alunos_view.dart';
+import 'package:projetobase/aula15/view/consulta_fipe_view.dart';
 import 'package:provider/provider.dart';
 
 import 'aula14/aula14.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
         '/pedidos': (context) => const PedidoView(),
         '/aula14': (context) => const Aula14(),
         '/listaAlunos': (context) => const ListaAlunosView(),
+        '/consultaFipe': (context) => const ConsultaFipeView(),
       },
     );
   }

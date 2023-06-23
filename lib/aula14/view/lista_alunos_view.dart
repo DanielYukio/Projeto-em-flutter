@@ -39,7 +39,10 @@ class _ListaAlunosViewState extends State<ListaAlunosView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Alunos')),
+      appBar: AppBar(
+        title: const Text('Lista de Alunos'),
+        backgroundColor: Colors.greenAccent,
+      ),
       body: Column(
         children: [
           Padding(

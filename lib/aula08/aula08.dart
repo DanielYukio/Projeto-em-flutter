@@ -61,7 +61,7 @@ class _Aula08State extends State<Aula08> {
         child: Center(
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width * 0.75,
+            width: MediaQuery.of(context).size.width * 0.80,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -144,7 +144,7 @@ class _Aula08State extends State<Aula08> {
                           '/cardapio',
                         );
                       },
-                      child: const Text('Cardapio'),
+                      child: const Text('Produtos'),
                     ),
                     OutlinedButton(
                       onPressed: () {
@@ -154,7 +154,16 @@ class _Aula08State extends State<Aula08> {
                         );
                       },
                       child: const Text('Alunos'),
-                    )
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/consultaFipe',
+                        );
+                      },
+                      child: const Text('Fipe'),
+                    ),
                   ],
                 ),
               ],
